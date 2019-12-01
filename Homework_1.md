@@ -20,7 +20,7 @@
 
 ![image.png](image.png)
 
-<font color=black size=3 face=times>&emsp;Controller sends processing request with the query parameters (dataset ids, time period, and variables) and spatial region; HBase extracts the required data based on the dataset id (D), time (T), and variable (V); the extracted data are loaded to MapReduce Operator as a list of key-value pairs; the Map first conducts spatial (X, Y, Z) sub-setting based on the specified spatial region. The composite key sorts and groups the emitted intermediate data from Map based on the composition of (D, T, V) by MR Operator; and finally the result is written back to HBase. ** Scientists can develop different MapReduce algorithms to process the data stored in HBase as Pluggable MR Operators.**
+<font color=black size=3 face=times>&emsp;Controller sends processing request with the query parameters (dataset ids, time period, and variables) and spatial region; HBase extracts the required data based on the dataset id (D), time (T), and variable (V); the extracted data are loaded to MapReduce Operator as a list of key-value pairs; the Map first conducts spatial (X, Y, Z) sub-setting based on the specified spatial region. The composite key sorts and groups the emitted intermediate data from Map based on the composition of (D, T, V) by MR Operator; and finally the result is written back to HBase. **Scientists can develop different MapReduce algorithms to process the data stored in HBase as Pluggable MR Operators**.
 
 ### References
 
