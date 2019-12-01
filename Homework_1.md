@@ -18,7 +18,7 @@
 
 <font color=black size=3 face=times>&emsp;To tackle big geoscience data analytics challenges, a scientific workflow framework is proposed using cloud computing as the fundamental infrastructure. Specifically, HBase is adopted for storing and managing big geoscience data across distributed computers. MapReduce-based algorithm framework is developed to support parallel processing of geoscience data. The workflow is shown in Fig. 1.
 
-[Workflow to Analyze Big Geoscience Data](image.png)
+![Workflow to Analyze Big Geoscience Data](attachment:image.png)
 
 <font color=black size=3 face=times>&emsp;Controller sends processing request with the query parameters (dataset ids, time period, and variables) and spatial region; HBase extracts the required data based on the dataset id (D), time (T), and variable (V); the extracted data are loaded to MapReduce Operator as a list of key-value pairs; the Map first conducts spatial (X, Y, Z) sub-setting based on the specified spatial region. The composite key sorts and groups the emitted intermediate data from Map based on the composition of (D, T, V) by MR Operator; and finally the result is written back to HBase. ** Scientists can develop different MapReduce algorithms to process the data stored in HBase as Pluggable MR Operators.**
 
